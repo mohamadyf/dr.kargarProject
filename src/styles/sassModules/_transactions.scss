@@ -1,0 +1,54 @@
+.transaction{
+    margin: 10px auto;
+    width: 80%;
+}
+.transaction:nth-child(1){
+    margin-top: 60px;
+    @include howToShowIn($breakpoint){
+        margin-top: 140px
+    }
+}
+.transaction-container{
+    @include flex(center, flex-start, column);
+    margin-bottom: 20px;
+    border-radius: $radius;
+    background-color: $secondary-color;
+}
+.transaction-header{
+    width: 70%;
+    padding-right: 20px;
+    color: $dark-font-color;
+    padding-top: 10px;
+}
+
+.transaction-card-container{
+    width: 100%;
+}
+
+.transaction-card-detail-container{
+    @include flex(space-between,center);
+    border-radius: $radius;
+    padding: 10px 30px;
+    margin: 20px auto;
+    width: 90%;
+    height: 120px;
+    background-color: $primary-color;
+    @include howToShowIn($breakpoint){
+        height: auto;
+    }
+}
+
+.transaction-card-details{
+    @include flex(center, space-between, column)
+}
+
+.transaction-card-price{
+    font-size: 1.2rem;
+    font-weight: 600;
+    direction: ltr;
+}
+
+.m-down {
+    margin-bottom: 2px;
+
+}

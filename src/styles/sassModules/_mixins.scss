@@ -1,0 +1,20 @@
+@mixin flex($justify:justify-content,$align:align-items, $direction:row){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin inputsDefault(){
+    width: 200px;
+    font-size: 0.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+@mixin howToShowIn($device){
+    @media(max-width: $device){
+        @content;
+    }
+}

@@ -1,0 +1,38 @@
+.selectbox{
+  @include flex(space-between, center);
+  background-color: $secondary-color;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  padding: 0 20px;
+  width: 80%;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 0 0 $radius $radius;
+  color: $dark-font-color;
+  select{
+    @include inputsDefault();
+    cursor: pointer;
+  }
+  @include howToShowIn($breakpoint){
+    @include flex(center, center, column);
+    height: 110px;
+  }
+}
+
+.searchbar{
+  @include flex(center, center);
+  .searchbar-input{
+    @include inputsDefault();
+    margin: 0 10px;
+    @include howToShowIn($breakpoint){
+      margin: 0;
+      margin-top: 10px;
+    }
+  }
+  @include howToShowIn($breakpoint){
+    @include flex(flex-start, flex-start, column);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
